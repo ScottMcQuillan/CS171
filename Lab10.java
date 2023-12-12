@@ -37,11 +37,11 @@ public class Lab10 {
                 System.out.println("The area of the rectangle is: " + (a * b));
             
             } else if (input.equals("circle")) {
-                double r;
+                double radius; //gave variable more descriptive name
                 System.out.println("Enter the radius: ");
-                r = Double.parseDouble(scan.nextLine());
-                System.out.println("The circumference of the circle is: " + (Math.PI * r * 2));
-                System.out.println("The area of the circle is: " + (Math.PI * r * r));
+                radius = Double.parseDouble(scan.nextLine());
+                System.out.println("The circumference of the circle is: " + (Math.PI * radius * 2));
+                System.out.println("The area of the circle is: " + (Math.PI * radius * radius));
             }
         }
     }
@@ -75,32 +75,11 @@ public class Lab10 {
             System.out.println("Invalid day");
         }
 
-        //String[] monthNames = new String[12];
+        String[] monthNames = new String["January", "February", "March", "April", 
+        "May", "June", "July","August", "September", "October", "November", "December"]; // Added month names to array
        
-        if(month == 1) {
-            System.out.println("January");
-        } else if (month == 2) {
-            System.out.println("February");
-        } else if (month == 3) {
-            System.out.println("March");
-        } else if (month == 4) {
-            System.out.println("April");
-        } else if (month == 5) {
-            System.out.println("May");
-        } else if (month == 6) {
-            System.out.println("June");
-        } else if (month == 7) {
-            System.out.println("July");
-        } else if (month == 8) {
-            System.out.println("Augst");
-        } else if (month == 9) {
-            System.out.println("September");
-        } else if (month == 10) {
-            System.out.println("October");
-        } else if (month == 11) {
-            System.out.println("November");
-        } else if (month == 12) {
-            System.out.println("December");
+        System.out.println(monthNames[x]);
+
         } else {
             System.out.println("Invalid month");
         }
