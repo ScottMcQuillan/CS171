@@ -8,8 +8,8 @@ public class Lab10
 
     public static void main(String[] args)
     {
-        /*Q1();
-        Q2();*/
+        //Q1();
+        Q2();
         Q3();
         Q4();
         scan.close();
@@ -66,20 +66,19 @@ public class Lab10
 
         if (day >=1 && day <=31)
         {
-            int dayCheck = day%10; //added variable that finds remainder of day/10
-            if(dayCheck == 1) //added if statements that check for each ordinal suffix and prints accordingly
+            if(day == 1 || day > 12 && day%10 == 1) //added if statements that check for each ordinal suffix and prints accordingly
             {
               System.out.print("You selected "+day+"st of ");  
             }
-            else if(dayCheck == 2)
+            else if(day == 2 || day > 12 && day%10 == 2)
             {
-              System.out.print("You sFelected "+day+"nd of ");  
+              System.out.print("You selected "+day+"nd of ");  
             }
-            else if(dayCheck == 3)
+            else if(day == 3 || day > 12 && day%10 == 3)
             {
               System.out.print("You selected "+day+"rd of ");  
             }
-            else if(dayCheck > 3 || dayCheck == 0)
+            else if(day > 3)
             {
               System.out.print("You selected "+day+"th of ");  
             }
@@ -95,7 +94,7 @@ public class Lab10
 
         if (month >=1 && month <=12)
         {
-            System.out.println(monthNames[month]);
+            System.out.println(monthNames[month-1]);
         }
 
         else
